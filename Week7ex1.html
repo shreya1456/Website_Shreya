@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        hr {
+            margin: 10px 0 20px 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .buttons {
+            margin-top: 15px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 5px 15px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Search our web site!</h2>
+        <hr>
+
+        <form>
+            <div class="form-group">
+                <p><strong>Where do you want to search?</strong></p>
+
+                <input type="radio" name="search" checked> Whole site<br>
+                <input type="radio" name="search"> Business Partners Section<br>
+                <input type="radio" name="search"> Corporate Communications Section<br>
+                <input type="radio" name="search"> Lotus Education Section
+            </div>
+
+            <div class="form-group">
+                <label>Enter a word or two that we can search on:</label><br>
+                <input type="text" name="keyword">
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

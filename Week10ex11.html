@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Add & Display</title>
+    </head> 
+    <body>
+        <h2>Add Items to Array</h2> 
+        
+        <input type="text" id="itemInput" placeholder="Enter value"> 
+        <button onclick="addItem()">Add Item</button> 
+        <button onclick="displayItems()">Display</button> 
+
+        <p id="output"></p> 
+
+        <script>
+            var arr= []; 
+            function addItem()
+            {  
+                var value = document.getElementById("itemInput").value; 
+                arr.push(value);
+                document.getElementById("itemInput").value = ""; 
+            } 
+
+            function displayItems()
+            { 
+                var text=""; 
+                for (var i=0; i < arr.length; i++) 
+                { text +-"Element"+ i+ "="+ arr[i]+ "<br>"; } 
+                document.getElementById("output").innerHTML = text;
+            }
+        </script>
+    </body> 
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* ===== TOP HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 30px;
+  background: #eaeaea;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  height: 60px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Right side (menu + info) */
+.header-right {
+  text-align: right;
+}
+
+/* Menu */
+.menu {
+  margin-bottom: 8px;
+}
+
+.menu a {
+  margin-left: 8px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+/* Date & contact */
+.info {
+  font-size: 12px;
+  color: #333;
+}
+
+/* ===== MAIN SECTION ===== */
+.section {
+  padding: 30px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Cards */
+.card {
+  background: #eaeaea;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  border: 1px solid #ccc;
+}
+
+.card-logo {
+  width: 70px;
+  height: 70px;
+  background: #ccc;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 25px;
+  background: #eaeaea;
+  border-top: 2px solid #ccc;
+}
+
+.footer div {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.footer div:last-child {
+  border-right: none;
+}
+
+/* Map */
+.map-box {
+  width: 75%;
+  height: 120px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+
+  <!-- Logo -->
+  <div class="logo">Logo</div>
+
+  <!-- Right Side -->
+  <div class="header-right">
+    
+    <!-- Menu (RIGHT ALIGNED) -->
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Who We Work With</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Date + Tel -->
+    <div class="info">
+      Saturday 11th April 2026<br>
+      Tel: +34 91 123 4567
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="section">
+  <h2>Who We Work With</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-logo"></div>
+      <div>
+        <b>Coca Cola</b><br>
+        Steve Jobs - CEO
+        <hr>
+        <p>Working with Rees....</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-logo"></div>
+      <div>
+        <b>Coca Cola</b><br>
+        Steve Jobs - CEO
+        <hr>
+        <p>Working with Rees....</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-logo"></div>
+      <div>
+        <b>Coca Cola</b><br>
+        Steve Jobs - CEO
+        <hr>
+        <p>Working with Rees....</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-logo"></div>
+      <div>
+        <b>Coca Cola</b><br>
+        Steve Jobs - CEO
+        <hr>
+        <p>Working with Rees....</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+
+  <div>
+    <b>Site Map</b><br>
+    Home<br>About<br>Services<br>Who We Work With<br>Contact
+  </div>
+
+  <div>
+    <b>Client Testimonials</b>
+    <p>Duis mollis, est non commodo luctus...</p>
+    <p><b>Steve Jobs</b><br>CEO Window Foods</p>
+  </div>
+
+  <div>
+    <b>Google Map</b>
+    <div class="map-box">Map</div>
+  </div>
+
+  <div>
+    <b>Where are we?</b>
+    <p>
+      Calle de Opiña 20,<br>
+      28029 Madrid<br>
+      Tel: 91 756<br>
+      Mobile: +34
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
