@@ -1,8 +1,464 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> My Title </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mitho Mitho Mitho – Nepali Kitchen, Kathmandu</title>
+  <!-- Google Fonts: Playfair Display for headings, Nunito for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-My First Page
+
+  <!-- ===================== NAVIGATION BAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">🍜 Mitho Mitho Mitho</div>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home')" class="nav-btn active" id="nav-home">Home</a></li>
+      <li><a href="#" onclick="showPage('about')" class="nav-btn" id="nav-about">About</a></li>
+      <li><a href="#" onclick="showPage('menu')" class="nav-btn" id="nav-menu">Menu</a></li>
+      <li><a href="#" onclick="showPage('contact')" class="nav-btn" id="nav-contact">Contact</a></li>
+      <li><a href="#" onclick="showPage('reviews')" class="nav-btn" id="nav-reviews">Reviews</a></li>
+    </ul>
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+  </nav>
+
+  <!-- ===================== PAGE 1: HOME ===================== -->
+  <section id="page-home" class="page active">
+
+    <!-- Floating decorative petals -->
+    <div class="petal p1">🌸</div>
+    <div class="petal p2">🌺</div>
+    <div class="petal p3">🌸</div>
+    <div class="petal p4">🌼</div>
+    <div class="petal p5">🌸</div>
+
+    <!-- HERO / HOOK SECTION -->
+    <div class="hero-section">
+      <div class="hero-badge">✨ Kathmandu's Beloved Kitchen ✨</div>
+
+      <!-- LOGO BOARD -->
+      <div class="logo-board">
+        <div class="logo-inner">
+          <span class="logo-emoji">🍜</span>
+          <h1 class="logo-title">Mitho Mitho Mitho</h1>
+          <span class="logo-tagline">मिठो • मिठो • मिठो</span>
+        </div>
+        <div class="logo-glow"></div>
+      </div>
+
+      <!-- HOOK MESSAGE -->
+      <div class="hook-box">
+        <h2 class="hook-heading">Your Taste Buds Are Calling…</h2>
+        <p class="hook-text">
+          Close your eyes. Imagine the <strong>steaming broth</strong> of hand-pulled ramen,
+          a cup of <strong>golden Nepali milk tea</strong>, and the warmth of a
+          kitchen that feels like home. That craving you're feeling?
+          <em>That's Mitho Mitho Mitho.</em>
+        </p>
+        <div class="hook-emojis">🍜 🍵 🥘 🫖 🍱 🥗</div>
+        <button class="cta-btn" onclick="showPage('menu')">🍽️ Explore Our Menu</button>
+      </div>
+    </div>
+
+    <!-- WELCOME SECTION -->
+    <div class="welcome-section">
+      <h2 class="section-heading">Welcome to <span class="highlight">Mitho Mitho Mitho</span></h2>
+      <div class="welcome-card">
+        <div class="welcome-text">
+          <p>
+            Nestled in the heart of <strong>Kathmandu, Nepal</strong>, Mitho Mitho Mitho is more than a hotel —
+            it's a <em>celebration of Nepali flavour</em>. From the first sip of our freshly brewed tea to the
+            last bite of our signature ramen, every moment here is crafted to make you feel at home.
+          </p>
+          <p>
+            We serve <strong>authentic Nepali cuisine</strong>, from dal bhat to momos, thukpa to chiya,
+            and our world-famous <strong>Nepali Ramen Noodles</strong>. Whether you're dining in or taking home
+            a raw kit to recreate the magic yourself — <em>this is the best choice you'll make today.</em>
+          </p>
+          <div class="best-choice-badge">⭐ Best Choice for Authentic Nepali Taste in Kathmandu ⭐</div>
+        </div>
+        <div class="welcome-image">🏨</div>
+      </div>
+
+      <!-- SHOP RAW KIT CALLOUT -->
+      <div class="kit-banner">
+        <div class="kit-icon">🛒</div>
+        <div>
+          <h3>Take the Taste Home — Raw Kit Available!</h3>
+          <p>Order our authentic Nepali meal kits and cook Mitho flavours right in your kitchen.</p>
+        </div>
+        <button class="kit-btn" onclick="showPage('menu')">Shop Raw Kits</button>
+      </div>
+    </div>
+
+    <!-- FOOTER on Home -->
+    <footer class="page-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>📍 Find Us</h4>
+          <p>Maitri Marga, Bakhundole 3, Laitpur <br/>Bagmati Province, Nepal</p>
+        </div>
+        <div class="footer-col">
+          <h4>🕐 Hours</h4>
+          <p>Open Daily<br/>7:00 AM – 10:00 PM</p>
+        </div>
+        <div class="footer-col">
+          <h4>📞 Reach Out</h4>
+          <p>+977-01-408765<br/>mitho@hotel.com.np</p>
+        </div>
+        <div class="footer-col">
+          <h4>🌐 Location</h4>
+          <a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps →</a>
+        </div>
+      </div>
+      <div class="footer-copy">© 2025 Mitho Mitho Mitho Hotel · Lalitpur, Nepal · Made with Shree💗</div>
+    </footer>
+  </section>
+
+  <!-- ===================== PAGE 2: ABOUT ===================== -->
+  <section id="page-about" class="page">
+
+    <div class="about-hero">
+      <div class="petal p1">🌸</div>
+      <div class="petal p3">🌺</div>
+      <h1 class="about-hotel-name">Mitho Mitho Mitho</h1>
+      <p class="about-subtitle">मिठो मिठो मिठो · A Story of Flavour & Love</p>
+    </div>
+
+    <!-- OWNER SECTION -->
+    <div class="owner-section">
+      <div class="owner-card">
+        <div class="owner-avatar">👩‍🍳</div>
+        <div class="owner-info">
+          <h2>Meet the Founder</h2>
+          <h3 class="owner-name">Shreya Bista</h3>
+          <div class="owner-badges">
+            <span>🎓 Culinary Arts Graduate</span>
+            <span>💼 Entrepreneur</span>
+            <span>🇳🇵 Proud Nepali</span>
+          </div>
+          <p>
+            <strong>Shreya Bista 💗</strong> a passionate and creative entrepreneur who truly loves Nepali culture and food. Her dream is simple — to give every visitor a warm, memorable taste of Nepal. She carefully works on recipes, guides the team, and makes sure every guest feels welcome. For her, *food is a way to show love.*
+
+ a place where people can enjoy good food, feel happy, and experience true Nepali hospitality.
+ Shreya founded this hotel
+            with one dream: <em>to give every visitor an unforgettable taste of Nepal.</em>
+          </p>
+          <p>
+            Smart, dedicated, and deeply rooted in her heritage, Shreya hand-curates every recipe,
+            trains every chef, and personally ensures the warmest hospitality. Her philosophy?
+            <strong>"Food is love made visible."</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY THIS HOTEL -->
+    <div class="why-section">
+      <h2 class="section-heading">Why <span class="highlight">Mitho Mitho Mitho</span>?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🍜</div>
+          <h3>Signature Ramen Noodles</h3>
+          <p>Our Nepali-style ramen is brewed for 12 hours — rich, silky broth with hand-rolled noodles. Kathmandu's best-kept secret!</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🍵</div>
+          <h3>Authentic Nepali Tea</h3>
+          <p>Spiced, creamy, and brewed fresh every hour. One sip and you'll understand why visitors keep coming back.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🥘</div>
+          <h3>Full Nepali Thali</h3>
+          <p>Dal, bhat, tarkari, achar — a complete Nepali meal cooked with mountain herbs and village-sourced spices.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <h3>Heart of Kathmandu</h3>
+          <p>Located in Maitri Marga the cultural hub of Kathmandu. Easy to find, impossible to forget.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🧼</div>
+          <h3>Spotless Hygiene</h3>
+          <p>Our kitchen follows international hygiene standards. Every dish is prepared fresh, clean, and with love.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛒</div>
+          <h3>Raw Meal Kits</h3>
+          <p>Take our recipes home! Our raw meal kits let you recreate authentic Nepali flavours in your own kitchen.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>📍 Find Us</h4><p>Maitri Marga, Bakhundole 3, Laitpur<br/>Bagmati Province, Nepal</p></div>
+        <div class="footer-col"><h4>🕐 Hours</h4><p>Open Daily<br/>7:00 AM – 10:00 PM</p></div>
+        <div class="footer-col"><h4>📞 Reach Out</h4><p>+977-01-467544<br/>mitho@hotel.com.np</p></div>
+        <div class="footer-col"><h4>🌐 Location</h4><a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps →</a></div>
+      </div>
+      <div class="footer-copy">© 2025 Mitho Mitho Mitho Hotel · Laitpur, Nepal · Made with 💗</div>
+    </footer>
+  </section>
+
+  <!-- ===================== PAGE 3: MENU ===================== -->
+  <section id="page-menu" class="page">
+
+    <div class="menu-hero">
+      <div class="petal p2">🌸</div>
+      <div class="petal p4">🌺</div>
+      <h1 class="menu-title">Mitho Mitho Mitho</h1>
+      <p class="menu-subtitle">🍽️ Our Menu – Nepali Flavours, Pure Love 🍽️</p>
+    </div>
+
+    <!-- SPECIAL OFFERS -->
+    <div class="offers-section">
+      <h2 class="section-heading">🎉 Special <span class="highlight">Offers</span></h2>
+      <div class="offers-grid">
+        <div class="offer-card rainbow">
+          <div class="offer-tag">🔥 HOT DEAL</div>
+          <h3>Family Feast Offer</h3>
+          <p>For 4–6 people: Dal Bhat, Ramen, 6 Momos, Tea & Dessert</p>
+          <div class="offer-price"><s>NPR 2,400</s> <strong>NPR 1,600</strong></div>
+          <button class="buy-btn" onclick="openOrder('Family Feast Offer', 1600)">🛒 Order Now</button>
+        </div>
+        <div class="offer-card">
+          <div class="offer-tag">🎊 FESTIVAL</div>
+          <h3>Festival Special</h3>
+          <p>Dashain/Tihar Special: Full Thali + Sweet Sel Roti + Bonus Mitho Tea</p>
+          <div class="offer-price"><s>NPR 900</s> <strong>NPR 650</strong></div>
+          <button class="buy-btn" onclick="openOrder('Festival Special', 650)">🛒 Order Now</button>
+        </div>
+        <div class="offer-card">
+          <div class="offer-tag">💝 COMBO</div>
+          <h3>Date Night Combo</h3>
+          <p>2x Ramen + 2x Chiya + Dessert Plate. Perfect for couples!</p>
+          <div class="offer-price"><s>NPR 1,200</s> <strong>NPR 500</strong></div>
+          <button class="buy-btn" onclick="openOrder('Date Night Combo', 500)">🛒 Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOD MENU SECTIONS -->
+    <div class="menu-section">
+      <h2 class="section-heading">🍜 Noodles & <span class="highlight">Ramen</span></h2>
+      <div class="food-grid" id="food-grid-ramen">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2 class="section-heading">🥘 Nepali <span class="highlight">Classics</span></h2>
+      <div class="food-grid" id="food-grid-classics"></div>
+    </div>
+
+    <div class="menu-section">
+      <h2 class="section-heading">🍵 Drinks & <span class="highlight">Tea</span></h2>
+      <div class="food-grid" id="food-grid-drinks"></div>
+    </div>
+
+    <div class="menu-section">
+      <h2 class="section-heading">🛒 Raw Meal <span class="highlight">Kits</span></h2>
+      <div class="food-grid" id="food-grid-kits"></div>
+    </div>
+
+    <!-- ORDER MODAL -->
+    <div id="order-modal" class="modal-overlay" style="display:none">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeOrder()">✕</button>
+        <h2>🛒 Complete Your Order</h2>
+        <div class="modal-item-name" id="modal-item-name"></div>
+        <div class="modal-item-price" id="modal-item-price"></div>
+        <div class="modal-qty">
+          <label>Quantity:</label>
+          <div class="qty-controls">
+            <button onclick="changeQty(-1)">−</button>
+            <span id="qty-display">1</span>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+        <div class="modal-total">Total: NPR <span id="modal-total">0</span></div>
+        <h3>Select Payment Method</h3>
+        <div class="payment-options">
+          <label class="pay-option"><input type="radio" name="pay" value="cod" checked/> 🚚 Cash on Delivery</label>
+          <label class="pay-option"><input type="radio" name="pay" value="esewa"/> 💚 eSewa</label>
+          <label class="pay-option"><input type="radio" name="pay" value="khalti"/> 💜 Khalti</label>
+        </div>
+        <button class="confirm-btn" onclick="confirmOrder()">✅ Confirm Order</button>
+        <div id="order-success" class="order-success" style="display:none">🎉 Order Placed! We'll deliver soon. Mitho raho! 🙏</div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>📍 Find Us</h4><p>Maitri Marga, Bakhundole 3, Laitpur<br/>Bagmati Province, Nepal</p></div>
+        <div class="footer-col"><h4>🕐 Hours</h4><p>Open Daily<br/>7:00 AM – 10:00 PM</p></div>
+        <div class="footer-col"><h4>📞 Reach Out</h4><p>+977-01-4XXXXXX<br/>mitho@hotel.com.np</p></div>
+        <div class="footer-col"><h4>🌐 Location</h4><a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps →</a></div>
+      </div>
+      <div class="footer-copy">© 2025 Mitho Mitho Mitho Hotel · Lalitpur, Nepal · Made with shree💗</div>
+    </footer>
+  </section>
+
+  <!-- ===================== PAGE 4: CONTACT / LOGIN ===================== -->
+  <section id="page-contact" class="page">
+
+    <div class="contact-hero">
+      <div class="petal p1">🌸</div><div class="petal p5">🌺</div>
+      <h1 class="contact-hotel-name">Mitho Mitho Mitho</h1>
+      <p class="contact-subtitle">Join Our Mitho Family 🍜</p>
+    </div>
+
+    <div class="auth-wrapper">
+      <!-- TABS -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">🔑 Login</button>
+        <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">✨ Sign Up</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div id="form-login" class="auth-form active">
+        <h2>Welcome Back! 🙏</h2>
+        <p class="form-sub">Log in to place orders and leave reviews.</p>
+        <div class="form-group">
+          <label>📧 Email</label>
+          <input type="email" placeholder="you@example.com" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <label>🔒 Password</label>
+          <input type="password" placeholder="Enter password" class="form-input"/>
+        </div>
+        <button class="form-submit" onclick="handleAuth('login')">Login</button>
+        <p class="form-switch">Don't have an account? <a href="#" onclick="switchTab('signup')">Sign Up →</a></p>
+        <div id="auth-msg-login" class="auth-msg" style="display:none"></div>
+      </div>
+
+      <!-- SIGNUP FORM -->
+      <div id="form-signup" class="auth-form">
+        <h2>Create Account 🌸</h2>
+        <p class="form-sub">Join the Mitho Mitho Mitho family today!</p>
+        <div class="form-group">
+          <label>👤 Full Name</label>
+          <input type="text" placeholder="Shreya Bista" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <label>📧 Email</label>
+          <input type="email" placeholder="you@example.com" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <label>📱 Phone</label>
+          <input type="tel" placeholder="+977-98XXXXXXXX" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <label>🔒 Password</label>
+          <input type="password" placeholder="Create a strong password" class="form-input"/>
+        </div>
+        <button class="form-submit" onclick="handleAuth('signup')">Create Account</button>
+        <p class="form-switch">Already a member? <a href="#" onclick="switchTab('login')">Login →</a></p>
+        <div id="auth-msg-signup" class="auth-msg" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- CONTACT INFO SECTION -->
+    <div class="contact-info-section">
+      <h2 class="section-heading">📞 Get in <span class="highlight">Touch</span></h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="cc-icon">📍</div>
+          <h3>Visit Us</h3>
+          <p>Maitri Marga, Bakhundole 3, Laitpur<br/>Bagmati Province, Nepal</p>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">📞</div>
+          <h3>Call Us</h3>
+          <p>+977-01-4XXXXXX<br/>+977-98XXXXXXXX</p>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">📧</div>
+          <h3>Email Us</h3>
+          <p>mitho@hotel.com.np<br/>info@mithohotel.com</p>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">🕐</div>
+          <h3>Opening Hours</h3>
+          <p>Mon – Sun<br/>7:00 AM – 10:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>📍 Find Us</h4><p>Maitri Marga, Bakhundole 3, Laitpur<br/>Bagmati Province, Nepal</p></div>
+        <div class="footer-col"><h4>🕐 Hours</h4><p>Open Daily<br/>7:00 AM – 10:00 PM</p></div>
+        <div class="footer-col"><h4>📞 Reach Out</h4><p>+977-01-4XXXXXX<br/>mitho@hotel.com.np</p></div>
+        <div class="footer-col"><h4>🌐 Location</h4><a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps →</a></div>
+      </div>
+      <div class="footer-copy">© 2025 Mitho Mitho Mitho Hotel ·Laitpur, Nepal · Made with shree💗</div>
+    </footer>
+  </section>
+
+  <!-- ===================== PAGE 5: REVIEWS ===================== -->
+  <section id="page-reviews" class="page">
+
+    <div class="reviews-hero">
+      <div class="petal p2">🌸</div><div class="petal p4">🌺</div>
+      <h1 class="reviews-hotel-name">Mitho Mitho Mitho</h1>
+      <p class="reviews-subtitle">💬 What Our Guests Say</p>
+      <div class="reviews-stats">
+        <div class="stat-badge">⭐ 4.9/5</div>
+        <div class="stat-badge">💬 100+ Reviews</div>
+        <div class="stat-badge">🏆 Kathmandu's Best</div>
+      </div>
+    </div>
+
+    <!-- REVIEW GRID -->
+    <div class="reviews-section">
+      <div class="review-grid" id="review-grid">
+        <!-- Reviews injected by JS -->
+      </div>
+      <button class="load-more-btn" id="load-more-btn" onclick="loadMoreReviews()">Load More Reviews</button>
+    </div>
+
+    <!-- WRITE A REVIEW -->
+    <div class="write-review-section">
+      <h2 class="section-heading">✍️ Write Your <span class="highlight">Review</span></h2>
+      <div class="review-form-card">
+        <div class="form-group">
+          <label>👤 Your Name</label>
+          <input type="text" id="rev-name" placeholder="Sapan Ghimire" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <label>⭐ Rating</label>
+          <div class="star-selector" id="star-selector">
+            <span class="star" data-val="1" onclick="setRating(1)">★</span>
+            <span class="star" data-val="2" onclick="setRating(2)">★</span>
+            <span class="star" data-val="3" onclick="setRating(3)">★</span>
+            <span class="star" data-val="4" onclick="setRating(4)">★</span>
+            <span class="star" data-val="5" onclick="setRating(5)">★</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>💬 Your Review</label>
+          <textarea id="rev-text" placeholder="Tell us about your experience at Mitho Mitho Mitho..." class="form-textarea" rows="4"></textarea>
+        </div>
+        <button class="form-submit" onclick="submitReview()">Submit Review 🌟</button>
+        <div id="review-submitted-msg" class="auth-msg" style="display:none">🎉 Thank you! Your review has been submitted. Dhanyabad! 🙏</div>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>📍 Find Us</h4><p>Maitri Marga, Bakhundole 3, Laitpur<br/>Bagmati Province, Nepal</p></div>
+        <div class="footer-col"><h4>🕐 Hours</h4><p>Open Daily<br/>7:00 AM – 10:00 PM</p></div>
+        <div class="footer-col"><h4>📞 Reach Out</h4><p>+977-01-4XXXXXX<br/>mitho@hotel.com.np</p></div>
+        <div class="footer-col"><h4>🌐 Location</h4><a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps →</a></div>
+      </div>
+      <div class="footer-copy">© 2025 Mitho Mitho Mitho Hotel ·Laitpur, Nepal · Made with Shree💗</div>
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
